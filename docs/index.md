@@ -11,4 +11,4 @@ Esta es una **plantilla** basada en [MkDocs](https://www.mkdocs.org/) + [Materia
    ```yaml
    site_name: Documentación del Curso
    theme:
-     name: material
+     name: emmanuel del villar 
