@@ -70,6 +70,84 @@ create_timer(1.0, self.print_callback): Creates a timer that calls the print_cal
 
 create_publisher(String, 'Robot_speaking', 10): Creates a publisher that will send messages of type String to the Robot_speaking topic, with a queue size of 10 (the number of messages it can hold in the buffer).
 
+## 4. The Callback Function `print_callback`
+
+```python 
+def print_callback(self):  # Called by the timer
+    msg = String()  # Creates the message
+    msg.data = 'R2D2 say hello %d' % self.counter  # Assigns the message with the counter value
+    self.counter += 1  # Increments the counter
+    self.publishers_.publish(msg)  # Publishes the message
+```
+- `print_callback(self)`: This function is called every time the timer is triggered (every 1 second). In this function:
+
+- It creates a `String `type message.
+
+- Assigns the message text, including the current value of the  `counter`.
+
+- Increments the value of `counter`.
+
+- Publishes the message on the `Robot_speaking` topic through the self.publishers_ publisher.
+
+## 5. The Main Function `_main_`
+
+```python
+def main(args=None):  # Main function
+    rclpy.init(args=args)  # Initializes ROS 2
+    r2d2_node2 = myNode_fuction()  # Creates the node
+    rclpy.spin(r2d2_node2)  # Keeps the node running
+    rclpy.shutdown()  # Shuts down ROS 2
+```
+- `main(args=None)`: This is the main function that:
+
+- Initializes the ROS 2 system with `rclpy.init()`.
+
+- Creates the `r2d2_node2` node using the `myNode_fuction` class.
+
+- Calls `rclpy.spin(r2d2_node2)` to keep the node active and running until ROS 2 is shut down.
+
+- Ends the ROS 2 system with `rclpy.shutdown()`.
+
+## 6. Condition to Run the Script `_if __name__ == "__main__"_`
+
+```python
+if __name__ == "__main__":  # Executes the main function if the script is run directly
+    main()
+```
+-` if __name__ == "__main__"`: This line ensures that the `main() `function will only execute if the script is run directly (not when imported from another script). This is useful for controlling the execution of the program.
+
+# Full Code Publisher Node
+
+```python
+This code defines a node in ROS 2 that, every second, publishes a text message to the 'Robot_speaking' topic. The message contains a counter that increments with each publication, displaying the text "R2D2 says hello" followed by the current counter value. The node runs continuously using a timer and keeps the publication active as long as the node is running.
+
+``` python
+import rclpy  # ROS 2 Python library
+from rclpy.node import Node  # Base class to create ROS 2 nodes
+from example_interfaces.msg import String  # String message type
+
+class myNode_fuction(Node):  # Defines the node
+    def __init__(self):  # Constructor
+        super().__init__("my_second_mode")  # Initializes the node with a name
+        self.counter = 0  # Counter
+        self.create_timer(1.0, self.print_callback)  # Timer that calls print_callback every second
+        self.publishers_ = self.create_publisher(String, 'Robot_speaking', 10)  # Publisher for messages on the topic
+
+    def print_callback(self):  # Called by the timer
+        msg = String()  # Creates the message
+        msg.data = 'R2D2 say hello %d' % self.counter  # Assigns the message with the counter value
+        self.counter += 1  # Increments the counter
+        self.publishers_.publish(msg)  # Publishes the message
+
+def main(args=None):  # Main function
+    rclpy.init(args=args)  # Initializes ROS 2
+    r2d2_node2 = myNode_fuction()  # Creates the node
+    rclpy.spin(r2d2_node2)  # Keeps the node running
+    rclpy.shutdown()  # Shuts down ROS 2
+
+if __name__ == "__main__":  # Executes the main function if the script is run directly
+    main()
+```
 
 
 ![TEXT](recursos/imgs/act1/a1%20(7).png){ width="600" }
