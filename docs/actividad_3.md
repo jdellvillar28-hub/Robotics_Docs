@@ -264,7 +264,7 @@ First code (publisher): The first node, myNode_fuction, is responsible for publi
 
 Second code (subscriber and publisher): The second node, myNode_function, subscribes to the 'Robot_speaking' topic and receives the messages sent by the first node. Each time a message is received, it logs the content of the message. Additionally, the node has a timer that, every second, creates and publishes a message with an incremented counter on the 'c3po_speaking' topic.
 
-![TEXT](recursos/imgs/act4/(2).jpeg){ width="350" }
-![TEXT](recursos/imgs/act4/(3).jpeg){ width="350" }
-![TEXT](recursos/imgs/act4/(7).jpeg){ width="350" }
-![TEXT](recursos/imgs/act4/(5).jpeg){ width="350" }
+![TEXT](recursos/imgs/act4/(2).jpeg){ width="700" }
+![TEXT](recursos/imgs/act4/(3).jpeg){ width="700" }
+![TEXT](recursos/imgs/act4/(7).jpeg){ width="700" }
+![TEXT](recursos/imgs/act4/(5).jpeg){ width="700" }
