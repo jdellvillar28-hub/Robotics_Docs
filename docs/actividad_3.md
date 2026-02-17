@@ -3,7 +3,7 @@
 
 The task outlined requires creating two nodes in ROS2:
 
-# Activity Information
+## Activity Information
 
 The activity involves creating two nodes:
 ![Solution 5](recursos/imgs/act4/(1).jpeg)
