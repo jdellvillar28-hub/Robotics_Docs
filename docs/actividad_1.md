@@ -106,7 +106,7 @@ They feature a morphology inspired by the **human body**, usually consisting of 
 **Typical applications:** research, assistance, social interaction, technological demonstrators.
 
 ![TEXT](recursos/imgs/act1/a1%20(14).png){ width="350" }
-![TEXT](recursos/imgs/act1/a1%20(18).png){ width="300" }
+![TEXT](recursos/imgs/act1/a1%20(18).png){ width="250" }
 ---
 
 ### Biomimetic Robots
