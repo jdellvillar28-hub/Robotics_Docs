@@ -1,0 +1,1539 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../actividad_6/">
+      
+      
+        <link rel="next" href="../actividad_8/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>📚 URDF Robot Simulations - Plantilla para Documentación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#urdf-robot-simulations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Plantilla para Documentación" class="md-header__button md-logo" aria-label="Plantilla para Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plantilla para Documentación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📚 URDF Robot Simulations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Plantilla para Documentación" class="md-nav__button md-logo" aria-label="Plantilla para Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plantilla para Documentación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Robot Morphology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transform Nomenclature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS2 Node Creation Task
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Forward Kinematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS 2 Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS 2 Custom Interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 URDF Robot Simulations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 URDF Robot Simulations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-links-and-joints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) Links and Joints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-code-1-box-robot-with-prismatic-joint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) Code 1: Box Robot with Prismatic Joint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-code-2-basic-box-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5) Code 2: Basic Box Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-code-3-7-dof-cylindrical-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6) Code 3: 7-DOF Cylindrical Robot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-code-4-mixed-shapes-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7) Code 4: Mixed Shapes Robot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-code-5-extended-cylindrical-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8) Code 5: Extended Cylindrical Robot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9) Conclusions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment - Inverse Kinematics and Jacobian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encabezados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Ejemplo de Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitcmds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Comandos básicos de Git (primeros pasos)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../totuga_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Ros2 Turtlesim Catch Them All
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-links-and-joints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) Links and Joints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-code-1-box-robot-with-prismatic-joint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) Code 1: Box Robot with Prismatic Joint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-code-2-basic-box-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5) Code 2: Basic Box Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-code-3-7-dof-cylindrical-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6) Code 3: 7-DOF Cylindrical Robot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-code-4-mixed-shapes-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7) Code 4: Mixed Shapes Robot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-code-5-extended-cylindrical-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8) Code 5: Extended Cylindrical Robot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9) Conclusions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="urdf-robot-simulations">📚 URDF Robot Simulations</h1>
+<blockquote>
+<p>In this assignment, I created different robotic structures using URDF (Unified Robot Description Format) and visualized them using RViz. The main focus was on creating and positioning coordinate systems (joints) and geometric shapes (links). We already calculated the forward kinematics in a previous task.</p>
+</blockquote>
+<hr />
+<h2 id="1-summary">1) Summary</h2>
+<ul>
+<li><strong>Homework Name:</strong> URDF Robot Simulations</li>
+<li><strong>Author:</strong> Angel Ivan Dominguez Cruz</li>
+<li><strong>Subject:</strong> Applied Robotics</li>
+<li><strong>Date:</strong> 05/03/2026</li>
+</ul>
+<hr />
+<h2 id="2-objectives">2) Objectives</h2>
+<ul>
+<li><strong>General:</strong> Understand how to build robot models using URDF. Learn how to define materials, place geometric shapes (links), and connect them with coordinate systems (joints) using rotations (rpy) and translations (xyz).</li>
+</ul>
+<p align="center">
+  <img src="https://docs.ros.org/en/kinetic/api/moveit_tutorials/html/_images/rviz_plugin_head.png" width="500">
+</p>
+
+<hr />
+<h2 id="3-links-and-joints">3) Links and Joints</h2>
+<p>In URDF, a robot is made of Links (the solid parts like arms or bases) and Joints (the connections between the links that allow movement).</p>
+<p>During these simulations, we defined:</p>
+<ul>
+<li><strong>Visual Geometries:</strong> We used box and cylinder shapes to build the robot parts.</li>
+<li><strong>Materials:</strong> We added colors like red, blue, green, and gray to make the robots easy to identify in the simulation.</li>
+<li><strong>Joints:</strong> We used different types of joints to connect our coordinate systems:<ul>
+<li><strong><em>revolute:</em></strong> Rotates like a standard motor.</li>
+<li><strong><em>fixed:</em></strong> Does not move, keeping the parts solid.</li>
+<li><strong><em>prismatic:</em></strong> Slides in a straight line.</li>
+</ul>
+</li>
+<li><strong>Origins:</strong> We calculated the xyz (position in meters) and rpy (rotation in radians: roll, pitch, yaw) to position every piece correctly in space.</li>
+</ul>
+<hr />
+<h2 id="4-code-1-box-robot-with-prismatic-joint">4) Code 1: Box Robot with Prismatic Joint</h2>
+<p>This robot uses mostly box shapes. It features a revolute shoulder, a fixed connection, and a prismatic elbow that slides.</p>
+<pre><code class="language-xml">&lt;?xml version = &quot;1.0&quot;?&gt;
+&lt;robot name = &quot;my_robot&quot;&gt;
+    &lt;material name=&quot;blue&quot;&gt;
+                &lt;color rgba=&quot;0 0 1 1&quot;/&gt;
+    &lt;/material&gt;
+    &lt;material name=&quot;gray&quot;&gt;
+                &lt;color rgba=&quot;0.5 0.5 0.5 1&quot;/&gt;
+    &lt;/material&gt;
+    &lt;material name=&quot;red&quot;&gt;
+                &lt;color rgba=&quot;1 0 0 1&quot;/&gt;
+    &lt;/material&gt;
+
+    &lt;joint name=&quot;base_shoulder_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 0.25&quot; rpy=&quot;-1.57 0 0&quot;/&gt;
+        &lt;parent link=&quot;base_link&quot;/&gt;
+        &lt;child link=&quot;shoulder_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;-4.71&quot; upper=&quot;-1.57&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;shoulder_shoulder1_joint&quot; type=&quot;fixed&quot;&gt;
+        &lt;origin xyz=&quot;0 1 0&quot; rpy=&quot;0 0 0&quot;/&gt;
+        &lt;parent link=&quot;shoulder_link&quot;/&gt;
+        &lt;child link=&quot;shoulder_link2&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;shoulder_elbow_joint&quot; type=&quot;prismatic&quot;&gt;
+        &lt;origin xyz=&quot;0.5 0 0&quot; rpy=&quot;-1.57 0 0&quot;/&gt;
+        &lt;parent link=&quot;shoulder_link&quot;/&gt;
+        &lt;child link=&quot;elbow_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;-0.2&quot; upper=&quot;0.2&quot; effort=&quot;100&quot; velocity=&quot;0.5&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;elbow_wrist_joint&quot; type=&quot;fixed&quot;&gt;
+        &lt;origin xyz=&quot;0 0 1.4&quot; rpy=&quot;0 0 0&quot;/&gt;
+        &lt;parent link=&quot;elbow_link&quot;/&gt;
+        &lt;child link=&quot;wrist_link&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;link name = &quot;base_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;box size=&quot;0.25 0.25 0.5&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0 0 0&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;gray&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;shoulder_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;box size=&quot;0.1 1 0.1&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0.05 0.5 0&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;red&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;shoulder_link2&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;box size=&quot;0.45 0.1 0.1&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0.225 0 0&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;blue&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;elbow_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;box size=&quot;0.1 0.1 0.8&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0 0 1&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;red&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;wrist_link&quot;&gt;
+    &lt;/link&gt;
+&lt;/robot&gt;
+</code></pre>
+<p><img alt="Robot 1 Position 1" src="../recursos/imgs/urdfrobots/e1p1.jpeg" />
+<img alt="Robot 1 Position 2" src="../recursos/imgs/urdfrobots/e1p2.jpeg" /></p>
+<hr />
+<h2 id="5-code-2-basic-box-structure">5) Code 2: Basic Box Structure</h2>
+<p>This code defines a simple vertical structure using boxes and basic materials.</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;robot name=&quot;my_robot&quot;&gt;
+
+    &lt;link name=&quot;base_link&quot;&gt; 
+    &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 0.5&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;box size=&quot;0.1 0.1 1&quot; /&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;blue&quot;&gt;
+            &lt;color rgba=&quot;0 0 1.0 1.0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt;  
+    &lt;/link&gt;
+
+    &lt;link name=&quot;link1&quot;&gt;
+    &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 0.45&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;box size=&quot;0.1 0.1 1.0&quot; /&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;Red&quot;&gt;
+            &lt;color rgba=&quot;1.0 0 0 1.0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt;  
+    &lt;/link&gt;
+
+    &lt;link name=&quot;link2&quot;&gt;
+    &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 0.45&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;box size=&quot;0.1 0.1 1.0&quot; /&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;Red&quot;&gt;
+            &lt;color rgba=&quot;1.0 0 0 0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt;  
+    &lt;/link&gt;
+
+    &lt;link name=&quot;link3&quot;&gt;
+    &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 0.45&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;box size= &lt;!-- Note: Code excerpt cuts off here --&gt;
+</code></pre>
+<p><img alt="Robot 2 Position 1" src="../recursos/imgs/urdfrobots/e2p1.jpeg" />
+<img alt="Robot 2 Position 2" src="../recursos/imgs/urdfrobots/e2p2.jpeg" /></p>
+<hr />
+<h2 id="6-code-3-7-dof-cylindrical-robot">6) Code 3: 7-DOF Cylindrical Robot</h2>
+<p>This is a complex robot with 7 links made entirely of cylinders and 6 revolute joints. We used green, red, and blue colors to identify the axes.</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;robot name=&quot;my_robot&quot;&gt;
+
+    &lt;link name=&quot;base_link&quot;&gt; 
+    &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 0.1&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;cylinder radius=&quot;0.2&quot; length=&quot;0.2&quot;/&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;blue&quot;&gt;
+            &lt;color rgba=&quot;0 0 1.0 1.0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt;  
+    &lt;/link&gt;
+
+    &lt;link name=&quot;link1&quot;&gt;
+    &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 0.4&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;cylinder radius=&quot;0.1&quot; length=&quot;0.9&quot;/&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;Red&quot;&gt;
+            &lt;color rgba=&quot;1.0 0 0 1.0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt;  
+    &lt;/link&gt;
+
+    &lt;link name=&quot;link2&quot;&gt; 
+        &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 0&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;cylinder radius=&quot;0.1&quot; length=&quot;0.3&quot;/&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;green&quot;&gt;
+            &lt;color rgba=&quot;0 1.0 0 1.0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt; 
+                &lt;visual&gt;
+        &lt;origin xyz=&quot;0.5 0 0&quot; rpy=&quot;0 1.57 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;cylinder radius=&quot;0.1&quot; length=&quot;0.8&quot;/&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;Red&quot;&gt;
+            &lt;color rgba=&quot;1.0 0 0 1.0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt; 
+    &lt;/link&gt;
+
+    &lt;link name=&quot;link3&quot;&gt; 
+            &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 0&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;cylinder radius=&quot;0.1&quot; length=&quot;0.3&quot;/&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;green&quot;&gt;
+            &lt;color rgba=&quot;0 1.0 0 1.0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt; 
+    &lt;/link&gt;
+
+    &lt;link name=&quot;link4&quot;&gt; 
+            &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 0.5&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;cylinder radius=&quot;0.1&quot; length=&quot;1&quot;/&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;Red&quot;&gt;
+            &lt;color rgba=&quot;1.0 0 0 1.0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt; 
+    &lt;/link&gt;
+
+    &lt;link name=&quot;link5&quot;&gt; 
+                &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 0&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;cylinder radius=&quot;0.1&quot; length=&quot;0.3&quot;/&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;green&quot;&gt;
+            &lt;color rgba=&quot;0 1.0 0 1.0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt; 
+    &lt;/link&gt;
+
+    &lt;link name=&quot;link6&quot;&gt; 
+            &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 0.5&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;cylinder radius=&quot;0.1&quot; length=&quot;1&quot;/&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;Red&quot;&gt;
+            &lt;color rgba=&quot;1.0 0 0 1.0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt; 
+    &lt;/link&gt;
+    &lt;link name=&quot;link7&quot;&gt; 
+                    &lt;visual&gt;
+        &lt;origin xyz=&quot;0 0 -0.025&quot; rpy=&quot;0 0 0&quot; /&gt;
+        &lt;geometry&gt;
+            &lt;cylinder radius=&quot;0.12&quot; length=&quot;0.05&quot;/&gt;
+        &lt;/geometry&gt;
+        &lt;material name=&quot;blue&quot;&gt;
+            &lt;color rgba=&quot;0 0 1.0 1.0&quot;/&gt;
+        &lt;/material&gt;
+    &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;joint name=&quot;joint1&quot; type=&quot;revolute&quot;&gt;
+        &lt;parent link=&quot;base_link&quot;/&gt;
+        &lt;child link=&quot;link1&quot;/&gt;
+        &lt;origin xyz=&quot;0 0 0.2&quot; rpy=&quot;0 0 0 &quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;-1.57&quot; upper=&quot;1.57&quot; effort=&quot;100&quot; velocity=&quot;1&quot;/&gt;
+    &lt;/joint&gt;
+    &lt;joint name=&quot;joint2&quot; type=&quot;revolute&quot;&gt;
+        &lt;parent link=&quot;link1&quot;/&gt;
+        &lt;child link=&quot;link2&quot;/&gt;
+        &lt;origin xyz=&quot;0 0 1.0&quot; rpy=&quot;-1.57 0 0 &quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;-1.57&quot; upper=&quot;1.57&quot; effort=&quot;100&quot; velocity=&quot;1&quot;/&gt;
+    &lt;/joint&gt;
+    &lt;joint name=&quot;joint3&quot; type=&quot;revolute&quot;&gt;
+        &lt;parent link=&quot;link2&quot;/&gt;
+        &lt;child link=&quot;link3&quot;/&gt;
+        &lt;origin xyz=&quot;1 0 0&quot; rpy=&quot;0 0 0 &quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;-1.57&quot; upper=&quot;1.57&quot; effort=&quot;100&quot; velocity=&quot;1&quot;/&gt;
+    &lt;/joint&gt;
+    &lt;joint name=&quot;joint4&quot; type=&quot;revolute&quot;&gt;
+        &lt;parent link=&quot;link3&quot;/&gt;
+        &lt;child link=&quot;link4&quot;/&gt;
+        &lt;origin xyz=&quot;0 0 0&quot; rpy=&quot;-1.57 0 -1.57 &quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;-1.57&quot; upper=&quot;1.57&quot; effort=&quot;100&quot; velocity=&quot;1&quot;/&gt;
+    &lt;/joint&gt;
+    &lt;joint name=&quot;joint5&quot; type=&quot;revolute&quot;&gt;
+        &lt;parent link=&quot;link4&quot;/&gt;
+        &lt;child link=&quot;link5&quot;/&gt;
+        &lt;origin xyz=&quot;0 0 1&quot; rpy=&quot;-1.57 0 -1.57 &quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;-1.57&quot; upper=&quot;1.57&quot; effort=&quot;100&quot; velocity=&quot;1&quot;/&gt;
+    &lt;/joint&gt;
+    &lt;joint name=&quot;joint6&quot; type=&quot;revolute&quot;&gt;
+        &lt;parent link=&quot;link5&quot;/&gt;
+        &lt;child link=&quot;link6&quot;/&gt;
+        &lt;origin xyz=&quot;0 0 0&quot; rpy=&quot;1.57 0 0 &quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;-1.57&quot; upper=&quot;1.57&quot; effort=&quot;100&quot; velocity=&quot;1&quot;/&gt;
+    &lt;/joint&gt;
+    &lt;joint name=&quot;joint7&quot; type=&quot;fixed&quot;&gt;
+        &lt;parent link=&quot;link6&quot;/&gt;
+        &lt;child link=&quot;link7&quot;/&gt;
+        &lt;origin xyz=&quot;0 0 1.0&quot; rpy=&quot;0 0 0 &quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;-1.57&quot; upper=&quot;1.57&quot; effort=&quot;100&quot; velocity=&quot;1&quot;/&gt;
+    &lt;/joint&gt;
+&lt;/robot&gt;
+</code></pre>
+<p><img alt="Robot 3 Position 1" src="../recursos/imgs/urdfrobots/e3p1.jpeg" />
+<img alt="Robot 3 Position 2" src="../recursos/imgs/urdfrobots/e3p2.jpeg" /></p>
+<hr />
+<h2 id="7-code-4-mixed-shapes-robot">7) Code 4: Mixed Shapes Robot</h2>
+<p>This robot mixes cylinders (for the base and shoulder) and boxes (for the elbow and wrist). It looks more like a traditional industrial robot arm.</p>
+<pre><code class="language-xml">&lt;?xml version = &quot;1.0&quot;?&gt;
+&lt;robot name = &quot;my_robot&quot;&gt;
+    &lt;material name=&quot;blue&quot;&gt;
+                &lt;color rgba=&quot;0 0 1 1&quot;/&gt;
+    &lt;/material&gt;
+    &lt;material name=&quot;gray&quot;&gt;
+                &lt;color rgba=&quot;0.5 0.5 0.5 1&quot;/&gt;
+    &lt;/material&gt;
+    &lt;material name=&quot;red&quot;&gt;
+                &lt;color rgba=&quot;1 0 0 1&quot;/&gt;
+    &lt;/material&gt;
+
+    &lt;joint name=&quot;base_shoulder_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 0.25&quot; rpy=&quot;0 0 0&quot;/&gt;
+        &lt;parent link=&quot;base_link&quot;/&gt;
+        &lt;child link=&quot;shoulder_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;shoulder_elbow_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 1.3&quot; rpy=&quot;-1.57 0 0&quot;/&gt;
+        &lt;parent link=&quot;shoulder_link&quot;/&gt;
+        &lt;child link=&quot;elbow_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;elbow_wrist_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0.8 0 0&quot; rpy=&quot;0 0 0&quot;/&gt;
+        &lt;parent link=&quot;elbow_link&quot;/&gt;
+        &lt;child link=&quot;wrist_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;wrist_finger_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 -0.3&quot; rpy=&quot;-1.57 0 -1.57&quot;/&gt;
+        &lt;parent link=&quot;wrist_link&quot;/&gt;
+        &lt;child link=&quot;finger_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;finger_nail_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 0.8&quot; rpy=&quot;1.57 0 0&quot;/&gt;
+        &lt;parent link=&quot;finger_link&quot;/&gt;
+        &lt;child link=&quot;nail_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;nail_nail1_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 0&quot; rpy=&quot;-1.57 0 0&quot;/&gt;
+        &lt;parent link=&quot;nail_link&quot;/&gt;
+        &lt;child link=&quot;nail1_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;nail1_tool_joint&quot; type=&quot;fixed&quot;&gt;
+        &lt;origin xyz=&quot;0 0 0.2&quot; rpy=&quot;0 0 0&quot;/&gt;
+        &lt;parent link=&quot;nail1_link&quot;/&gt;
+        &lt;child link=&quot;tool_link&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;link name = &quot;base_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;cylinder radius=&quot;0.5&quot; length=&quot;0.5&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0 0 0&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;gray&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;shoulder_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;cylinder radius=&quot;0.2&quot; length=&quot;1.05&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0 0 0.525&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;red&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;elbow_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;box size=&quot;1.2 0.5 0.3&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0.3 0 0&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;blue&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;wrist_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;box size=&quot;0.8 0.2 0.3&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0.2 0 -0.3&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;red&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;finger_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;cylinder radius=&quot;0.1&quot; length=&quot;0.2&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0 0 0.7&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;blue&quot;/&gt;
+        &lt;/visual&gt; 
+    &lt;/link&gt;
+
+    &lt;link name = &quot;nail_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;cylinder radius=&quot;0.1&quot; length=&quot;0.15&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0 0.075 0&quot; rpy=&quot;-1.57 0 0&quot;/&gt;
+            &lt;material name=&quot;red&quot;/&gt;
+        &lt;/visual&gt; 
+    &lt;/link&gt;
+
+    &lt;link name = &quot;nail1_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;cylinder radius=&quot;0.1&quot; length=&quot;0.1&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0 0 0.2&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;blue&quot;/&gt;
+        &lt;/visual&gt; 
+    &lt;/link&gt;
+
+    &lt;link name = &quot;tool_link&quot;&gt;
+    &lt;/link&gt;
+&lt;/robot&gt;
+</code></pre>
+<p><img alt="Robot 4 Position 1" src="../recursos/imgs/urdfrobots/e4p1.jpeg" />
+<img alt="Robot 4 Position 2" src="../recursos/imgs/urdfrobots/e4p2.jpeg" /></p>
+<hr />
+<h2 id="8-code-5-extended-cylindrical-robot">8) Code 5: Extended Cylindrical Robot</h2>
+<p>This robot is built entirely with cylinders, representing an extended robotic arm with small joints at the end.</p>
+<pre><code class="language-xml">&lt;?xml version = &quot;1.0&quot;?&gt;
+&lt;robot name = &quot;my_robot&quot;&gt;
+    &lt;material name=&quot;blue&quot;&gt;
+                &lt;color rgba=&quot;0 0 1 1&quot;/&gt;
+    &lt;/material&gt;
+    &lt;material name=&quot;gray&quot;&gt;
+                &lt;color rgba=&quot;0.5 0.5 0.5 1&quot;/&gt;
+    &lt;/material&gt;
+    &lt;material name=&quot;red&quot;&gt;
+                &lt;color rgba=&quot;1 0 0 1&quot;/&gt;
+    &lt;/material&gt;
+
+    &lt;joint name=&quot;base_shoulder_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 0.25&quot; rpy=&quot;0 0 0&quot;/&gt;
+        &lt;parent link=&quot;base_link&quot;/&gt;
+        &lt;child link=&quot;shoulder_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;shoulder_elbow_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 0.5&quot; rpy=&quot;-1.57 0 0&quot;/&gt;
+        &lt;parent link=&quot;shoulder_link&quot;/&gt;
+        &lt;child link=&quot;elbow_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;-3.14&quot; upper=&quot;0&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;elbow_wrist_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0.5 0 0&quot; rpy=&quot;0 0 -1.57&quot;/&gt;
+        &lt;parent link=&quot;elbow_link&quot;/&gt;
+        &lt;child link=&quot;wrist_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;wrist_finger_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 0&quot; rpy=&quot;-1.57 0 0&quot;/&gt;
+        &lt;parent link=&quot;wrist_link&quot;/&gt;
+        &lt;child link=&quot;finger_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;finger_nail_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 0.8&quot; rpy=&quot;1.57 0 0&quot;/&gt;
+        &lt;parent link=&quot;finger_link&quot;/&gt;
+        &lt;child link=&quot;nail_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;nail_nail2_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 0&quot; rpy=&quot;-1.57 0 0&quot;/&gt;
+        &lt;parent link=&quot;nail_link&quot;/&gt;
+        &lt;child link=&quot;nail2_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;joint name=&quot;nail2_nail3_joint&quot; type=&quot;revolute&quot;&gt;
+        &lt;origin xyz=&quot;0 0 0.5&quot; rpy=&quot;0 0 0&quot;/&gt;
+        &lt;parent link=&quot;nail2_link&quot;/&gt;
+        &lt;child link=&quot;nail3_link&quot;/&gt;
+        &lt;axis xyz=&quot;0 0 1&quot;/&gt;
+        &lt;limit lower=&quot;0&quot; upper=&quot;3.14&quot; effort=&quot;100&quot; velocity=&quot;100&quot;/&gt;
+    &lt;/joint&gt;
+
+    &lt;link name = &quot;base_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;cylinder radius=&quot;0.5&quot; length=&quot;0.5&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0 0 0&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;gray&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;shoulder_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;cylinder radius=&quot;0.1&quot; length=&quot;0.4&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0 0 0.2&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;red&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;elbow_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;cylinder radius=&quot;0.1&quot; length=&quot;0.5&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0.15 0 0&quot; rpy=&quot;0 -1.57 0&quot;/&gt;
+            &lt;material name=&quot;blue&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;wrist_link&quot;&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;finger_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;cylinder radius=&quot;0.1&quot; length=&quot;1&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0 0 0.3&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;red&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;nail_link&quot;&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;nail2_link&quot;&gt;
+        &lt;visual&gt;
+            &lt;geometry&gt;
+                &lt;cylinder radius=&quot;0.1&quot; length=&quot;0.5&quot;/&gt;
+            &lt;/geometry&gt;
+            &lt;origin xyz=&quot;0 0 0.25&quot; rpy=&quot;0 0 0&quot;/&gt;
+            &lt;material name=&quot;blue&quot;/&gt;
+        &lt;/visual&gt;
+    &lt;/link&gt;
+
+    &lt;link name = &quot;nail3_link&quot;&gt;
+    &lt;/link&gt;
+&lt;/robot&gt;
+</code></pre>
+<p><img alt="Robot 5 Position 1" src="../recursos/imgs/urdfrobots/e5p1.jpeg" />
+<img alt="Robot 5 Position 2" src="../recursos/imgs/urdfrobots/e5p2.jpeg" /></p>
+<hr />
+<h2 id="9-conclusions">9) Conclusions</h2>
+<ul>
+<li><strong>General:</strong> We built and visualized different robot models using URDF. By learning how to set the xyz (position) and rpy (rotation) values, we learned how to correctly position coordinate systems and attach solid shapes to them. This activity helped us understand the physical structure of a robot in ROS 2.</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

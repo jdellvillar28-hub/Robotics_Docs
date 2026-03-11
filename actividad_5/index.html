@@ -1,0 +1,1675 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../actividad_4/">
+      
+      
+        <link rel="next" href="../actividad_6/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Activity - ROS 2 Services - Plantilla para Documentación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#activity-ros-2-services" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Plantilla para Documentación" class="md-header__button md-logo" aria-label="Plantilla para Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plantilla para Documentación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Activity - ROS 2 Services
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Plantilla para Documentación" class="md-nav__button md-logo" aria-label="Plantilla para Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plantilla para Documentación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Robot Morphology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transform Nomenclature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS2 Node Creation Task
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Forward Kinematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS 2 Services
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS 2 Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objective">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Recap:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-you-will-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Will Add:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-a-service-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create a Service Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-service-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Service Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-server-in-ros-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Server in ROS 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Server in ROS 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-1-publisher-node-for-activity-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CODE 1 - Publisher Node for Activity 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CODE 1 - Publisher Node for Activity 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-importing-libraries-and-defining-the-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Importing Libraries and Defining the Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-defining-the-mynode_function-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Defining the myNode_function Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-defining-the-print_callback-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Defining the print_callback Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-defining-the-main-function-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Defining the Main Function (main)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-executing-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Executing the Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-full-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Full Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-2-subscriber-and-publisher-node-for-activity-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code 2 - Subscriber and Publisher Node for Activity 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code 2 - Subscriber and Publisher Node for Activity 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-importing-libraries-and-defining-the-class_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Importing Libraries and Defining the Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-defining-the-mynode_function-class_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Defining the myNode_function Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-service-callback-for-resetting-the-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Service Callback for Resetting the Counter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-listener-callback-for-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Listener Callback for Subscription
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-timer-callback-for-publishing-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Timer Callback for Publishing Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-main-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Main Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-executing-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Executing the Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-full-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Full Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS 2 Custom Interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 URDF Robot Simulations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment - Inverse Kinematics and Jacobian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encabezados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Ejemplo de Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitcmds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Comandos básicos de Git (primeros pasos)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../totuga_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Ros2 Turtlesim Catch Them All
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objective">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Recap:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-you-will-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Will Add:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-a-service-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create a Service Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-service-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Service Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-server-in-ros-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Server in ROS 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Server in ROS 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-1-publisher-node-for-activity-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CODE 1 - Publisher Node for Activity 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CODE 1 - Publisher Node for Activity 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-importing-libraries-and-defining-the-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Importing Libraries and Defining the Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-defining-the-mynode_function-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Defining the myNode_function Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-defining-the-print_callback-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Defining the print_callback Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-defining-the-main-function-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Defining the Main Function (main)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-executing-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Executing the Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-full-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Full Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-2-subscriber-and-publisher-node-for-activity-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code 2 - Subscriber and Publisher Node for Activity 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code 2 - Subscriber and Publisher Node for Activity 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-importing-libraries-and-defining-the-class_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Importing Libraries and Defining the Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-defining-the-mynode_function-class_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Defining the myNode_function Class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-service-callback-for-resetting-the-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Service Callback for Resetting the Counter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-listener-callback-for-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Listener Callback for Subscription
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-timer-callback-for-publishing-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Timer Callback for Publishing Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-main-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Main Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-executing-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Executing the Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-full-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Full Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="activity-ros-2-services">Activity - ROS 2 Services</h1>
+<h2 id="objective">Objective</h2>
+<p>Let's practice with ROS 2 Services! You will build on the previous Topic activity where you worked with a publisher and subscriber. </p>
+<h3 id="quick-recap">Quick Recap:</h3>
+<ul>
+<li>The node <code>number_publisher</code> publishes a number to the <code>/number</code> topic.</li>
+<li>The node <code>number_counter</code> subscribes to the <code>/number</code> topic, adds the number to a counter, and publishes the updated counter to the <code>/number_count</code> topic.</li>
+</ul>
+<h3 id="what-you-will-add">What You Will Add:</h3>
+<ul>
+<li><strong>Service</strong>: You will create a service to reset the counter to zero.</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<h3 id="1-create-a-service-server">1. Create a Service Server</h3>
+<ul>
+<li><strong>Inside the <code>number_counter</code> node</strong>, create a service server.</li>
+<li><strong>Service name</strong>: <code>"/reset_counter"</code>.</li>
+<li><strong>Service type</strong>: <code>example_interfaces/srv/SetBool</code>.<ul>
+<li>Use <code>ros2 interface show</code> to explore the contents of the service type.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-service-logic">2. Service Logic</h3>
+<ul>
+<li>When the service is called, check the boolean data from the request.</li>
+<li>If the value is <code>True</code>, set the counter variable to 0.</li>
+</ul>
+<p>This service will allow you to reset the counter whenever needed.</p>
+<h2 id="service-server-in-ros-2">Service Server in ROS 2</h2>
+<p>A <strong>Service Server</strong> in ROS 2 is a node that provides a service, managing request/response interactions. It listens for requests, performs the requested action, and sends a response back.</p>
+<p>In ROS 2, a service is defined by two components:</p>
+<ol>
+<li><strong>Request</strong>: The data the <strong>Service Client</strong> sends to the <strong>Service Server</strong>.</li>
+<li><strong>Response</strong>: The data the <strong>Service Server</strong> sends back after processing the request.</li>
+</ol>
+<p>In your case, the <strong>Service Server</strong> will handle requests to reset a counter and will send back a response indicating whether the action was successful or not.</p>
+<h3 id="example">Example:</h3>
+<ul>
+<li><strong>Service Client</strong>: Sends a request to the <strong>Service Server</strong> to reset the counter.</li>
+<li><strong>Service Server</strong>: Receives the request, processes it (resets the counter), and sends a response indicating success or failure.</li>
+</ul>
+<h2 id="code-1-publisher-node-for-activity-2">CODE 1 - Publisher Node for Activity 2</h2>
+<h3 id="1-importing-libraries-and-defining-the-class">1. <strong>Importing Libraries and Defining the Class</strong></h3>
+<pre><code class="language-python">import rclpy  # ROS 2 Python library
+from rclpy.node import Node  # Base class to create ROS 2 nodes
+from example_interfaces.msg import Int64  # Int64 message type
+</code></pre>
+<p>In this part, the necessary libraries are imported to work with ROS 2 in Python. rclpy is the main ROS 2 library, Node is the base class to create nodes, and Int64 is the message type used to publish integer values.</p>
+<h3 id="2-defining-the-mynode_function-class">2. Defining the myNode_function Class</h3>
+<pre><code class="language-python">class myNode_function(Node):  # Defines the node
+    def __init__(self):  # Constructor
+        super().__init__(&quot;act2_number_publisher&quot;)  # Initializes the node with a name
+        self.counter = 1
+        self.get_logger().info('r2d2 act2 is ready')  # Log message indicating the node is ready
+        self.create_timer(1.0, self.print_callback)  # Timer that calls print_callback every second
+        self.publishers_ = self.create_publisher(Int64, 'number', 10)  # Publisher for messages on the 'number' topic
+</code></pre>
+<p>This part defines the myNode_function class, which inherits from Node. In the constructor:</p>
+<ul>
+<li>
+<p>The node is initialized with the name act2_number_publisher.</p>
+</li>
+<li>
+<p>A counter variable is initialized to 1.</p>
+</li>
+<li>
+<p>A log message is created to indicate that the node is ready.</p>
+</li>
+<li>
+<p>A timer is created to call the print_callback function every 1 second.</p>
+</li>
+<li>
+<p>A publisher is set up to send Int64 messages to the number topic.</p>
+</li>
+</ul>
+<h3 id="3-defining-the-print_callback-function">3. Defining the print_callback Function</h3>
+<pre><code class="language-python">    def print_callback(self):  # Called by the timer
+    self.get_logger().info('r2d2 act2 is sending a message')  # Log message indicating a message is being sent
+    msg = Int64()  # Creates the message
+    msg.data = self.counter  # Assigns the message with the counter value
+    self.publishers_.publish(msg)  # Publishes the message
+</code></pre>
+<p>The print_callback function is called whenever the timer is triggered. In this function:</p>
+<ul>
+<li>
+<p>A log message is created indicating that a message is being sent.</p>
+</li>
+<li>
+<p>An Int64 message is created.</p>
+</li>
+<li>
+<p>The value of the counter is assigned to the message.</p>
+</li>
+<li>
+<p>Finally, the message is published to the number topic.</p>
+</li>
+</ul>
+<h3 id="4-defining-the-main-function-main">4. Defining the Main Function (main)</h3>
+<pre><code class="language-python">def main(args=None):  # Main function
+    rclpy.init(args=args)  # Initializes ROS 2
+    act2_number_publisher = myNode_function()  # Creates the node
+    rclpy.spin(act2_number_publisher)  # Keeps the node running
+    rclpy.shutdown()  # Shuts down ROS 2
+</code></pre>
+<h3 id="5-executing-the-script">5. Executing the Script</h3>
+<pre><code class="language-python">if __name__ == &quot;__main__&quot;:  # Executes the main function if the script is run directly
+    main()
+</code></pre>
+<p>This block ensures that the main function is executed only when the script is run directly (not when it is imported as a module). When executed, it starts the node and keeps it running until shut down.</p>
+<h3 id="6-full-code">6. Full Code</h3>
+<p>This code creates a ROS 2 node that publishes integer values (Int64) to the number topic every second, starting with the value 1.</p>
+<pre><code class="language-python">#-----------PUBLSHER NODE FOR ACTIVITY 2----------------
+
+import rclpy  # ROS 2 Python library
+from rclpy.node import Node  # Base class to create ROS 2 nodes
+from example_interfaces.msg import Int64  # Int64 message type
+
+class myNode_function(Node):  # Defines the node
+
+    def __init__(self):  # Constructor
+        super().__init__(&quot;act2_number_publisher&quot;)  # Initializes the node with a name
+        self.counter = 1
+        self.get_logger().info('r2d2 act2 is ready')  # Log message indicating the node is ready
+        self.create_timer(1.0, self.print_callback)  # Timer that calls print_callback every second
+        self.publishers_ = self.create_publisher(Int64, 'number', 10)  # Publisher for messages on the topic
+
+    def print_callback(self):  # Called by the timer
+        self.get_logger().info('r2d2 act2 is sending a message')  # Log message indicating a message is being sent
+        msg = Int64()  # Creates the message
+        msg.data = self.counter  # Assigns the message with the counter value
+        self.publishers_.publish(msg)  # Publishes the message
+
+def main(args=None):  # Main function
+    rclpy.init(args=args)  # Initializes ROS 2
+    act2_number_publisher = myNode_function()  # Creates the node
+    rclpy.spin(act2_number_publisher)  # Keeps the node running
+    rclpy.shutdown()  # Shuts down ROS 2
+
+if __name__ == &quot;__main__&quot;:  # Executes the main function if the script is run directly
+    main()
+</code></pre>
+<h2 id="code-2-subscriber-and-publisher-node-for-activity-2">Code 2 - Subscriber and Publisher Node for Activity 2</h2>
+<h3 id="1-importing-libraries-and-defining-the-class_1">1. <strong>Importing Libraries and Defining the Class</strong></h3>
+<pre><code class="language-python">import rclpy  # ROS 2 library
+from rclpy.node import Node  # ROS 2 Node base class
+from example_interfaces.msg import Int64  # Int64 message type
+from example_interfaces.srv import SetBool  # SetBool message type
+</code></pre>
+<p>In this part, the necessary libraries are imported:</p>
+<ul>
+<li>
+<p>rclpy is the main ROS 2 library for Python.</p>
+</li>
+<li>
+<p>Node is the base class for creating ROS 2 nodes.</p>
+</li>
+<li>
+<p>Int64 is the message type used to send integer values.</p>
+</li>
+<li>
+<p>SetBool is the service type for the reset counter service.</p>
+</li>
+</ul>
+<h3 id="2-defining-the-mynode_function-class_1">2. Defining the myNode_function Class</h3>
+<pre><code class="language-python">class myNode_function(Node):  # Defines the node
+
+    def __init__(self):
+        super().__init__('act2_number_counter')  # Initialize the node
+
+        self.get_logger().info('c3po act2 is ready')  # Log sending message
+
+        self.suscriber_ = self.create_subscription(Int64, 'number', self.listener_callback, 10)
+        self.publishers_ = self.create_publisher(Int64, 'number_count', 10)
+        self.serve = self.create_service(SetBool, 'reset_counter', self.reset_counter_callback)
+
+        self.accumulated = 0  # Initialize the counter variable
+        self.counter = 0  # Initialize the counter variable
+
+        self.create_timer(1.0, self.print_callback)
+</code></pre>
+<p>In this section, the myNode_function class is defined. It inherits from Node:</p>
+<ul>
+<li>
+<p>The node is initialized with the name 'act2_number_counter'.</p>
+</li>
+<li>
+<p>A log message is created to indicate the node is ready.</p>
+</li>
+<li>
+<p>A subscriber is created to listen to the 'number' topic with the listener_callback function.</p>
+</li>
+<li>
+<p>A publisher is set up to publish Int64 messages to the 'number_count' topic.</p>
+</li>
+<li>
+<p>A service is created to handle the reset_counter service, calling the reset_counter_callback function when requested.</p>
+</li>
+<li>
+<p>Two counter variables (accumulated and counter) are initialized.</p>
+</li>
+<li>
+<p>A timer is created to call print_callback every second.</p>
+</li>
+</ul>
+<h3 id="3-service-callback-for-resetting-the-counter">3. Service Callback for Resetting the Counter</h3>
+<pre><code class="language-python">def reset_counter_callback(self, request, response):
+    if request.data == True:
+        self.accumulated = 0  # Reset the counter to 0
+        self.get_logger().info('Counter reset requested')  # Log reset request
+        response.success = True  # Indicate success
+        response.message = 'Counter reset successfully'  # Response message
+    else:
+        self.get_logger().info('Counter reset denied')  # Log reset denial
+        response.success = False  # Indicate failure
+        response.message = 'Counter reset failed'  # Response message
+
+    return response
+</code></pre>
+<p>The reset_counter_callback function handles the reset_counter service requests:</p>
+<ul>
+<li>
+<p>If the request data is True, it resets the accumulated counter to 0 and sends a success response.</p>
+</li>
+<li>
+<p>If the request data is False, it denies the reset and sends a failure response.</p>
+</li>
+</ul>
+<h3 id="4-listener-callback-for-subscription">4. Listener Callback for Subscription</h3>
+<pre><code class="language-python">def listener_callback(self, msg: Int64):
+    self.get_logger().info('Received number: %d' % msg.data)  # Log received message
+    self.accumulated += msg.data  # Increment the counter by received value
+    self.get_logger().info('Updated counter: %d' % self.accumulated)  # Log updated counter
+</code></pre>
+<p>The listener_callback function is called when a new message is received on the 'number' topic:</p>
+<ul>
+<li>
+<p>It logs the received number.</p>
+</li>
+<li>
+<p>The received number is added to the accumulated counter.</p>
+</li>
+<li>
+<p>The updated counter value is logged.</p>
+</li>
+</ul>
+<h3 id="5-timer-callback-for-publishing-messages">5. Timer Callback for Publishing Messages</h3>
+<pre><code class="language-python">def print_callback(self):
+    self.get_logger().info('c3po act2 is sending a message')  # Log sending message
+    msg = Int64()  # Create message
+    msg.data = self.counter # Set message data to current accumulated value
+    self.counter += 1  # Increment the counter for the next message
+    self.publishers_.publish(msg)  # Publish message
+</code></pre>
+<p>The print_callback function is triggered by the timer every second:</p>
+<ul>
+<li>
+<p>It logs that a message is being sent.</p>
+</li>
+<li>
+<p>It creates a new Int64 message and assigns it the current counter value.</p>
+</li>
+<li>
+<p>The counter is incremented for the next message.</p>
+</li>
+<li>
+<p>The message is published to the 'number_count' topic.</p>
+</li>
+</ul>
+<h3 id="6-main-function">6. Main Function</h3>
+<pre><code class="language-python">def main(args=None):
+    rclpy.init(args=args)  # Initialize ROS 2
+    act2_number_counter = myNode_function()  # Create node instance
+    rclpy.spin(act2_number_counter)  # Keep node running
+    rclpy.shutdown()  # Shutdown ROS 2
+</code></pre>
+<p>The main function initializes ROS 2, creates the node instance (myNode_function), keeps the node running with rclpy.spin(), and shuts down ROS 2 once the node is stopped.</p>
+<h3 id="7-executing-the-script">7. Executing the Script</h3>
+<pre><code class="language-python">if __name__ == &quot;__main__&quot;:
+    main()  # Run main function if executed directly
+</code></pre>
+<p>This block ensures that the main function is executed only when the script is run directly, not when it's imported as a module.</p>
+<h3 id="8-full-code">8. Full Code</h3>
+<p>This code creates a ROS 2 node that subscribes to the 'number' topic, accumulates the received numbers, and publishes the accumulated count to the 'number_count' topic. It also provides a service to reset the counter when requested.</p>
+<pre><code class="language-python">#-----------SUSCRIBER AND PUBLISHER NODE FOR ACTIVITY 2----------------
+
+import rclpy  # ROS 2 library
+from rclpy.node import Node  # ROS 2 Node base class
+from example_interfaces.msg import Int64  # Int64 message type
+from example_interfaces.srv import SetBool  # SetBool message type
+
+class myNode_function(Node):  # Defines the node
+
+    def __init__(self):
+        super().__init__('act2_number_counter')  # Initialize the node
+
+        self.get_logger().info('c3po act2 is ready')  # Log sending message
+
+        self.suscriber_ = self.create_subscription(Int64, 'number', self.listener_callback, 10)
+        self.publishers_ = self.create_publisher(Int64, 'number_count', 10)
+        self.serve = self.create_service(SetBool, 'reset_counter', self.reset_counter_callback)
+
+        self.accumulated = 0  # Initialize the counter variable
+        self.counter = 0  # Initialize the counter variable
+
+        self.create_timer(1.0, self.print_callback)
+
+    def reset_counter_callback(self, request, response):
+        if request.data == True:
+            self.accumulated = 0  # Reset the counter to 0
+            self.get_logger().info('Counter reset requested')  # Log reset request
+            response.success = True  # Indicate success
+            response.message = 'Counter reset successfully'  # Response message
+        else:
+            self.get_logger().info('Counter reset denied')  # Log reset denial
+            response.success = False  # Indicate failure
+            response.message = 'Counter reset failed'  # Response message
+
+        return response
+
+    def listener_callback(self, msg: Int64):
+        self.get_logger().info('Received number: %d' % msg.data)  # Log received message
+        self.accumulated += msg.data  # Increment the counter by received value
+        self.get_logger().info('Updated counter: %d' % self.accumulated)  # Log updated counter
+
+    def print_callback(self):
+        self.get_logger().info('c3po act2 is sending a message')  # Log sending message
+        msg = Int64()  # Create message
+        msg.data = self.counter # Set message data to current accumulated value
+        self.counter += 1  # Increment the counter for the next message
+        self.publishers_.publish(msg)  # Publish message
+
+def main(args=None):
+    rclpy.init(args=args)  # Initialize ROS 2
+    act2_number_counter = myNode_function()  # Create node instance
+    rclpy.spin(act2_number_counter)  # Keep node running
+    rclpy.shutdown()  # Shutdown ROS 2
+
+if __name__ == &quot;__main__&quot;:
+    main()  # Run main function if executed directly
+</code></pre>
+<h3 id="results">Results</h3>
+<p><img alt="TEXT" src="../recursos/imgs/act5/a%20%281%29.png" />{width=700px}
+<img alt="TEXT" src="../recursos/imgs/act5/a%20%283%29.png" />{width=700px}
+<img alt="TEXT" src="../recursos/imgs/act5/a%20%286%29.png" />{width=700px}
+<img alt="TEXT" src="../recursos/imgs/act5/a%20%284%29.png" />{width=700px}
+<img alt="TEXT" src="../recursos/imgs/act5/a%20%282%29.png" />{width=700px}</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

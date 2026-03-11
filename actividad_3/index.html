@@ -1,0 +1,1060 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../actividad_2/">
+      
+      
+        <link rel="next" href="../actividad_4/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Activity - ROS2 Node Creation Task - Plantilla para Documentación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#activity-ros2-node-creation-task" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Plantilla para Documentación" class="md-header__button md-logo" aria-label="Plantilla para Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plantilla para Documentación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Activity - ROS2 Node Creation Task
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Plantilla para Documentación" class="md-nav__button md-logo" aria-label="Plantilla para Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plantilla para Documentación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Robot Morphology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transform Nomenclature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS2 Node Creation Task
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS2 Node Creation Task
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#activity-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activity Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Activity Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number_publisher-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        number_publisher Node:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number_counter-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        number_counter Node:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Forward Kinematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS 2 Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS 2 Custom Interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 URDF Robot Simulations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment - Inverse Kinematics and Jacobian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encabezados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Ejemplo de Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitcmds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Comandos básicos de Git (primeros pasos)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../totuga_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Ros2 Turtlesim Catch Them All
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#activity-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activity Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Activity Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number_publisher-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        number_publisher Node:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number_counter-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        number_counter Node:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="activity-ros2-node-creation-task">Activity - ROS2 Node Creation Task</h1>
+<p>The task outlined requires creating two nodes in ROS2:</p>
+<h2 id="activity-information">Activity Information</h2>
+<p>The activity involves creating two nodes:
+<img alt="Solution 5" src="../recursos/imgs/act4/%281%29.jpeg" /></p>
+<ol>
+<li><strong>number_publisher Node:</strong></li>
+<li>Publishes a constant number to the <code>/number</code> topic using the <code>example_interfaces/msg/Int64</code> message type.</li>
+<li>
+<p>The published value will always be the same number.</p>
+</li>
+<li>
+<p><strong>number_counter Node:</strong></p>
+</li>
+<li>Subscribes to the <code>/number</code> topic and maintains a counter.</li>
+<li>Each time a new number is received, it adds it to the counter.</li>
+<li>It also has a publisher that publishes the new counter value to the <code>/number_count</code> topic.</li>
+</ol>
+<h3 id="number_publisher-node">number_publisher Node:</h3>
+<p>This node is responsible for publishing a constant number on the <code>/number</code> topic using the <code>example_interfaces/msg/Int64</code> message type. After creating this publisher, you should test it using the command <code>ros2 topic echo /number</code> to ensure it's working correctly.</p>
+<h3 id="number_counter-node">number_counter Node:</h3>
+<p>This node has both a subscriber and a publisher. It subscribes to the <code>/number</code> topic, which receives the number published by the <code>number_publisher</code>. The node keeps track of the received numbers using a counter variable. Each time a new number is received, it adds that number to the counter. After updating the counter, the node publishes the new counter value on the <code>/number_count</code> topic.</p>
+<h1 id="publisher-node-explanation">Publisher Node Explanation</h1>
+<h2 id="1-imports-and-libraries">1. Imports and Libraries</h2>
+<pre><code class="language-python">import rclpy  # ROS 2 Python library
+from rclpy.node import Node  # Base class to create ROS 2 nodes
+from example_interfaces.msg import String  # String message type
+</code></pre>
+<ul>
+<li>
+<p><code>rclpy</code>: This is the main library used to interact with ROS 2 in Python. It allows the creation of nodes, message publishing and subscribing, and event handling.</p>
+</li>
+<li>
+<p><code>Node</code>: This is the base class for creating a node in ROS 2. Nodes are fundamental processing units in ROS 2.</p>
+</li>
+<li>
+<p><code>String</code>: This imports the String message type from example_interfaces, which enables sending and receiving text-based (string) data through a topic.</p>
+</li>
+</ul>
+<h2 id="2-class-definition-mynode_fuction">2. Class Definition <code>myNode_fuction</code></h2>
+<pre><code class="language-python">class myNode_fuction(Node):  # Defines the node
+</code></pre>
+<ul>
+<li>A class <code>myNode_fuction</code> is defined, inheriting from <code>Node</code>. This means that <code>myNode_fuction</code> is a ROS 2 node that can perform tasks within the ROS system. </li>
+<li>The node will interact with the ROS system by publishing messages to a topic every second.</li>
+</ul>
+<h2 id="3-the-constructor-__init__">3. The Constructor <code>__init__</code></h2>
+<pre><code class="language-python">def __init__(self):  # Constructor
+    super().__init__(&quot;my_second_mode&quot;)  # Initializes the node with a name
+    self.counter = 0  # Counter
+
+    self.create_timer(1.0, self.print_callback)  # Timer that calls print_callback every second
+    self.publishers_ = self.create_publisher(String, 'Robot_speaking', 10)  # Publisher for messages on the topic
+</code></pre>
+<ul>
+<li>
+<p><code>_init_(self)</code>: The constructor of the node. It initializes the node with the name <code>"my_second_mode"</code>, defines a  <code>counter</code> variable to count the messages, and sets up two key elements:</p>
+</li>
+<li>
+<p><code>create_timer(1.0, self.print_callback)</code>: Creates a timer that calls the <code>print_callback</code> function every 1 second.</p>
+</li>
+<li>
+<p><code>create_publisher(String, 'Robot_speaking', 10)</code>: Creates a publisher that will send messages of type String to the <code>Robot_speaking</code> topic, with a queue size of 10 (the number of messages it can hold in the buffer).</p>
+</li>
+</ul>
+<h2 id="4-the-callback-function-print_callback">4. The Callback Function <code>print_callback</code></h2>
+<pre><code class="language-python">def print_callback(self):  # Called by the timer
+    msg = String()  # Creates the message
+    msg.data = 'R2D2 say hello %d' % self.counter  # Assigns the message with the counter value
+    self.counter += 1  # Increments the counter
+    self.publishers_.publish(msg)  # Publishes the message
+</code></pre>
+<ul>
+<li>
+<p><code>print_callback(self)</code>: This function is called every time the timer is triggered (every 1 second). In this function:</p>
+</li>
+<li>
+<p>It creates a <code>String</code>type message.</p>
+</li>
+<li>
+<p>Assigns the message text, including the current value of the  <code>counter</code>.</p>
+</li>
+<li>
+<p>Increments the value of <code>counter</code>.</p>
+</li>
+<li>
+<p>Publishes the message on the <code>Robot_speaking</code> topic through the self.publishers_ publisher.</p>
+</li>
+</ul>
+<h2 id="5-the-main-function-_main_">5. The Main Function <code>_main_</code></h2>
+<pre><code class="language-python">def main(args=None):  # Main function
+    rclpy.init(args=args)  # Initializes ROS 2
+    r2d2_node2 = myNode_fuction()  # Creates the node
+    rclpy.spin(r2d2_node2)  # Keeps the node running
+    rclpy.shutdown()  # Shuts down ROS 2
+</code></pre>
+<ul>
+<li>
+<p><code>main(args=None)</code>: This is the main function that:</p>
+</li>
+<li>
+<p>Initializes the ROS 2 system with <code>rclpy.init()</code>.</p>
+</li>
+<li>
+<p>Creates the <code>r2d2_node2</code> node using the <code>myNode_fuction</code> class.</p>
+</li>
+<li>
+<p>Calls <code>rclpy.spin(r2d2_node2)</code> to keep the node active and running until ROS 2 is shut down.</p>
+</li>
+<li>
+<p>Ends the ROS 2 system with <code>rclpy.shutdown()</code>.</p>
+</li>
+</ul>
+<h2 id="6-condition-to-run-the-script-_if-__name__-__main___">6. Condition to Run the Script <code>_if __name__ == "__main__"_</code></h2>
+<pre><code class="language-python">if __name__ == &quot;__main__&quot;:  # Executes the main function if the script is run directly
+    main()
+</code></pre>
+<ul>
+<li><code>if __name__ == "__main__"</code>: This line ensures that the <code>main()</code>function will only execute if the script is run directly (not when imported from another script). This is useful for controlling the execution of the program.</li>
+</ul>
+<h2 id="7-full-code-publisher-node">7. Full Code Publisher Node</h2>
+<p>This code defines a node in ROS 2 that, every second, publishes a text message to the 'Robot_speaking' topic. The message contains a counter that increments with each publication, displaying the text "R2D2 says hello" followed by the current counter value. The node runs continuously using a timer and keeps the publication active as long as the node is running.</p>
+<pre><code class="language-python">import rclpy  # ROS 2 Python library
+from rclpy.node import Node  # Base class to create ROS 2 nodes
+from example_interfaces.msg import String  # String message type
+
+class myNode_fuction(Node):  # Defines the node
+    def __init__(self):  # Constructor
+        super().__init__(&quot;my_second_mode&quot;)  # Initializes the node with a name
+        self.counter = 0  # Counter
+        self.create_timer(1.0, self.print_callback)  # Timer that calls print_callback every second
+        self.publishers_ = self.create_publisher(String, 'Robot_speaking', 10)  # Publisher for messages on the topic
+
+    def print_callback(self):  # Called by the timer
+        msg = String()  # Creates the message
+        msg.data = 'R2D2 say hello %d' % self.counter  # Assigns the message with the counter value
+        self.counter += 1  # Increments the counter
+        self.publishers_.publish(msg)  # Publishes the message
+
+def main(args=None):  # Main function
+    rclpy.init(args=args)  # Initializes ROS 2
+    r2d2_node2 = myNode_fuction()  # Creates the node
+    rclpy.spin(r2d2_node2)  # Keeps the node running
+    rclpy.shutdown()  # Shuts down ROS 2
+
+if __name__ == &quot;__main__&quot;:  # Executes the main function if the script is run directly
+    main()
+</code></pre>
+<h1 id="publisher-and-suscriber-node-explanation">Publisher and Suscriber Node Explanation</h1>
+<h2 id="1-imports-and-libraries_1">1. Imports and Libraries</h2>
+<pre><code class="language-python">import rclpy  # ROS 2 library
+from rclpy.node import Node  # ROS 2 Node base class
+from example_interfaces.msg import String  # String message type
+from example_interfaces.msg import Int64  # Int64 message type
+</code></pre>
+<ul>
+<li>
+<p><code>rclpy</code>: This is the main library to interact with ROS 2 in Python. It allows the creation of nodes, publishing and subscribing to messages, and handling events.</p>
+</li>
+<li>
+<p>`Node``: The base class for creating nodes in ROS 2. A node is a processing unit that can interact with other nodes within the ROS ecosystem.</p>
+</li>
+<li>
+<p><code>String</code>: Imports the <code>String</code> message type from <code>example_interfaces</code>, which is used for sending and receiving text data through a topic.</p>
+</li>
+</ul>
+<h2 id="2-class-definition-mynode_function">2. Class Definition <code>myNode_function</code></h2>
+<pre><code class="language-python">class myNode_function(Node):  # Defines the node
+</code></pre>
+<ul>
+<li><code>myNode_function</code>: A class that inherits from <code>Node</code>, making it a ROS 2 node. This class is responsible for subscribing to a topic and publishing messages.</li>
+</ul>
+<h2 id="3-the-constructor-__init___1">3. The Constructor <code>__init__</code></h2>
+<pre><code class="language-python">def _init_(self):
+    super()._init_('c3po_node3')  # Initialize the node
+    self.suscriber_ = self.create_subscription(  # Subscribe to 'Robot_speaking'
+        String, 'Robot_speaking', self.listener_callback, 10)  # Link callback
+    self.get_logger().info('c3po is operational')  # Log node startup
+    self.counter = 0  # Counter for messages
+    self.create_timer(1.0, self.print_callback)  # Timer for periodic message
+    self.publishers_ = self.create_publisher(String, 'c3po_speaking', 10)  # Publisher for 'c3po_speaking'
+</code></pre>
+<ul>
+<li><code>_init_(self)</code>: This constructor initializes the node with the name <code>c3po_node3</code>, subscribes to the <code>Robot_speaking</code> topic, and creates a publisher for the <code>c3po_speaking</code> topic. It also sets up a timer for periodic message handling and logs that the node is operational.</li>
+</ul>
+<h2 id="4-the-subscriber-callback-listener_callback">4. The Subscriber Callback <code>listener_callback</code></h2>
+<pre><code class="language-python">def listener_callback(self, msg: String):
+    self.get_logger().info(f'I heard: &quot;{msg.data}&quot;')  # Log received message
+</code></pre>
+<ul>
+<li><code>listener_callback(self, msg: String)</code>: This function is called whenever a message is received on the <code>Robot_speaking</code> topic. It logs the received message.</li>
+</ul>
+<h2 id="5-callback-function-print_callback">5. Callback Function <code>print_callback</code></h2>
+<pre><code class="language-python">def print_callback(self):
+    self.get_logger().info('c3po is sending a message')  # Log sending message
+    msg = String()  # Create message
+    msg.data = 'c3po says hello: %d' % self.counter  # Set message data
+    self.counter += 1  # Increment counter
+    self.publishers_.publish(msg)  # Publish message
+</code></pre>
+<ul>
+<li><code>print_callback(self)</code>: This function is triggered every second by the timer. It logs that the node is sending a message, creates a message with the current counter value, increments the counter, and publishes the message on the <code>c3po_speaking</code> topic.</li>
+</ul>
+<h2 id="6-the-main-function-main">6. The Main Function <code>main</code></h2>
+<pre><code class="language-python">def main(args=None):
+    rclpy.init(args=args)  # Initialize ROS 2
+    c3po_node3 = myNode_function()  # Create node instance
+    rclpy.spin(c3po_node3)  # Keep node running
+    rclpy.shutdown()  # Shutdown ROS 2
+</code></pre>
+<ul>
+<li><code>main(args=None)</code>: This function initializes ROS 2, creates the node instance, keeps the node running, and shuts down ROS 2 when finished.</li>
+</ul>
+<h2 id="7-condition-to-run-the-script">7. Condition to Run the Script</h2>
+<pre><code class="language-python">if __name__ == &quot;__main__&quot;:
+    main()  # Run main function if script is executed directly
+</code></pre>
+<ul>
+<li><code>if __name__ == "__main__"</code>: This line ensures that the <code>main()</code> function only runs if the script is executed directly (not when imported from another module).</li>
+</ul>
+<h2 id="8-full-code-for-publisher-and-subscriber-node">8. Full code for Publisher and Subscriber Node</h2>
+<p>This code defines a node in ROS 2 that subscribes to a topic called 'Robot_speaking' and publishes messages to the 'c3po_speaking' topic. The myNode_function node subscribes to String messages on the 'Robot_speaking' topic and, when a message is received, it logs the message. Additionally, every second, the node publishes a message with an incremented counter, sending it to the 'c3po_speaking' topic. The node runs continuously and handles both message subscription and publication, logging activity during the process.</p>
+<pre><code class="language-python">import rclpy  # ROS 2 library
+from rclpy.node import Node  # ROS 2 Node base class
+from example_interfaces.msg import String  # String message type
+
+class myNode_function(Node):  # Defines the node
+    def __init__(self):
+        super().__init__('c3po_node3')  # Initialize the node
+        self.suscriber_ = self.create_subscription(  # Subscribe to 'Robot_speaking'
+            String, 'Robot_speaking', self.listener_callback, 10)  # Link callback
+        self.get_logger().info('c3po is operational')  # Log node startup
+        self.counter = 0  # Counter for messages
+        self.create_timer(1.0, self.print_callback)  # Timer for periodic message
+        self.publishers_ = self.create_publisher(String, 'c3po_speaking', 10)  # Publisher for 'c3po_speaking'
+
+    def listener_callback(self, msg: String):
+        self.get_logger().info(f'I heard: &quot;{msg.data}&quot;')  # Log received message
+
+    def print_callback(self):
+        self.get_logger().info('c3po is sending a message')  # Log sending message
+        msg = String()  # Create message
+        msg.data = 'c3po says hello: %d' % self.counter  # Set message data
+        self.counter += 1  # Increment counter
+        self.publishers_.publish(msg)  # Publish message
+
+def main(args=None):
+    rclpy.init(args=args)  # Initialize ROS 2
+    c3po_node3 = myNode_function()  # Create node instance
+    rclpy.spin(c3po_node3)  # Keep node running
+    rclpy.shutdown()  # Shutdown ROS 2
+
+if __name__ == &quot;__main__&quot;:
+    main()  # Run main function if executed directly
+</code></pre>
+<h1 id="results">Results</h1>
+<p>The two codes together create communication between two nodes in ROS 2, where one acts as a publisher and the other as a subscriber.</p>
+<p>First code (publisher): The first node, myNode_fuction, is responsible for publishing a message with an incremented counter on the 'Robot_speaking' topic. Every second, the node generates and publishes a text message that includes the current value of the counter. This node is responsible for sending data periodically to any node subscribed to that topic.</p>
+<p>Second code (subscriber and publisher): The second node, myNode_function, subscribes to the 'Robot_speaking' topic and receives the messages sent by the first node. Each time a message is received, it logs the content of the message. Additionally, the node has a timer that, every second, creates and publishes a message with an incremented counter on the 'c3po_speaking' topic.</p>
+<p><img alt="TEXT" src="../recursos/imgs/act4/%282%29.jpeg" />{ width="700" }
+<img alt="TEXT" src="../recursos/imgs/act4/%283%29.jpeg" />{ width="700" }
+<img alt="TEXT" src="../recursos/imgs/act4/%287%29.jpeg" />{ width="700" }
+<img alt="TEXT" src="../recursos/imgs/act4/%285%29.jpeg" />{ width="700" }</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

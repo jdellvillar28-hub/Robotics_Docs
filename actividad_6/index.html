@@ -1,0 +1,1245 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../actividad_5/">
+      
+      
+        <link rel="next" href="../actividad_7/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Activity - ROS 2 Custom Interfaces - Plantilla para Documentación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#activity-ros-2-custom-interfaces" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Plantilla para Documentación" class="md-header__button md-logo" aria-label="Plantilla para Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plantilla para Documentación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Activity - ROS 2 Custom Interfaces
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Plantilla para Documentación" class="md-nav__button md-logo" aria-label="Plantilla para Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plantilla para Documentación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Robot Morphology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transform Nomenclature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS2 Node Creation Task
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Forward Kinematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS 2 Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS 2 Custom Interfaces
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activity - ROS 2 Custom Interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-implement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps to implement:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suggested-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suggested flow:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements:
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 URDF Robot Simulations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment - Inverse Kinematics and Jacobian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encabezados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Ejemplo de Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitcmds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Comandos básicos de Git (primeros pasos)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../totuga_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Ros2 Turtlesim Catch Them All
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-implement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps to implement:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suggested-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suggested flow:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements:
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="activity-ros-2-custom-interfaces">Activity - ROS 2 Custom Interfaces</h1>
+<h2 id="description">Description</h2>
+<p>In this activity, you will implement the battery + LED panel example to understand Services in ROS 2. The task is to turn on an LED when the battery is empty and turn it off when the battery is full.</p>
+<h3 id="steps-to-implement">Steps to implement:</h3>
+<ol>
+<li><strong>Battery Node:</strong> Simulate the battery state using a variable representing its status.</li>
+<li><strong>LED Panel Node:</strong> Manage the LED panel with an integer array to track the LEDs' states.</li>
+<li><strong>Custom Messages and Services:</strong> Create a custom message for the LED panel state and a custom service to control the LEDs.</li>
+<li><strong>Simulation:</strong> Simulate the battery state change, alternating between empty and full every 4 and 6 seconds, respectively, and turn the LEDs on/off via service calls.</li>
+</ol>
+<h3 id="suggested-flow">Suggested flow:</h3>
+<ul>
+<li><strong>Step 1:</strong> Create the LED panel node and define the LED state.</li>
+<li><strong>Step 2:</strong> Add a service server within the LED panel node to control the LEDs.</li>
+<li><strong>Step 3:</strong> Create the battery node, simulate the battery life, and call the "set_led" service using a service client.</li>
+</ul>
+<p>This process will loop indefinitely, toggling between the two states until CTRL+C is pressed.</p>
+<h2 id="requirements">Requirements:</h2>
+<ul>
+<li>Create 1 node for the battery.</li>
+<li>Create 1 node for the LED panel.</li>
+<li>Define a custom message for the “led_panel_state” topic.</li>
+<li>Define a custom service for “set_led”.</li>
+</ul>
+<hr />
+<p><strong>Hint:</strong><br />
+- <strong>Step 1:</strong> Create the LED panel node and publish the LED state (with a custom message).
+- <strong>Step 2:</strong> Add a service server inside the LED panel node (with a custom service definition).
+- <strong>Step 3:</strong> Create the battery node, simulate the battery cycle, and call the "set_led" service using a service client.</p>
+<h1 id="explanation-of-code-led-server-node-for-battery-status">Explanation of Code: LED Server Node for Battery Status</h1>
+<h2 id="code-1-led-server-node">Code 1 - LED Server Node</h2>
+<p>This Python code defines a ROS 2 service server that listens for battery status requests and controls the LED behavior based on the battery status. The service uses the custom <code>BateryStatus</code> service definition from the <code>my_robot_interfaces</code> package.</p>
+<h3 id="1-importing-libraries">1. Importing Libraries</h3>
+<pre><code class="language-python">import rclpy
+from rclpy.node import Node
+from my_robot_interfaces.srv import BateryStatus  # Import the service
+</code></pre>
+<ul>
+<li>
+<p>rclpy: The ROS 2 Python library, which provides the necessary classes to create ROS nodes and handle communication between nodes.</p>
+</li>
+<li>
+<p>Node: A base class from rclpy.node to create a node in ROS 2.</p>
+</li>
+<li>
+<p>BateryStatus: The custom service message for battery status, imported from the my_robot_interfaces.srv module.</p>
+</li>
+</ul>
+<h3 id="2-defining-the-ledsserver-node">2. Defining the LedsServer Node</h3>
+<pre><code class="language-python">class LedsServer(Node):
+    def __init__(self):
+        super().__init__('leds_server')
+        self.srv = self.create_service(BateryStatus, 'battery_status_service', self.handle_service)
+        self.get_logger().info('LEDs is ready')
+</code></pre>
+<ul>
+<li>
+<p>LedsServer(Node): The class inherits from Node, allowing it to function as a ROS node.</p>
+</li>
+<li>
+<p>create_service: This function creates a service server, which listens for service requests. The service type is BateryStatus, the service name is 'battery_status_service', and the callback function for handling requests is handle_service.</p>
+</li>
+<li>
+<p>get_logger().info: Logs that the server is ready to handle requests.</p>
+</li>
+</ul>
+<h3 id="3-service-request-handling">3. Service Request Handling</h3>
+<pre><code class="language-python">    def handle_service(self, request, response):
+        # Convertimos los valores bool a 1 y 0
+        value1 = 1 if request.value1 else 0
+        value2 = 1 if request.value2 else 0
+        value3 = 1 if request.value3 else 0
+
+        # Imprimimos los valores de la batería convertidos a 1 y 0
+        self.get_logger().info(f&quot;Received battery status: {value1}, {value2}, {value3}&quot;)
+
+        # Lógica para imprimir el estado de la batería basado en el tercer valor (value3)
+        if request.value3:
+            self.get_logger().info(&quot;Low Battery&quot;)
+        else:
+            self.get_logger().info(&quot;Full Battery&quot;)
+
+        # Devolvemos los valores tal cual
+        response.value1 = request.value1
+        response.value2 = request.value2
+        response.value3 = request.value3
+        return response
+   ``` 
+
+   - handle_service: This function is called whenever a service request is received. It processes the request and sends back a response.
+
+- The battery values (value1, value2, value3) are boolean (True/False), which are converted to integers (1 or 0).
+
+- The logger prints the battery status after converting the values to integers.
+
+- If the third value (value3) indicates the battery is low, it logs &quot;Low Battery&quot;. Otherwise, it logs &quot;Full Battery&quot;.
+
+- Finally, the function returns the received values in the response.
+
+### 4. Main Function to Spin the Node
+
+```python
+def main(args=None):
+    rclpy.init(args=args)
+    server = LedsServer()
+    rclpy.spin(server)
+    rclpy.shutdown()
+</code></pre>
+<ul>
+<li>
+<p>rclpy.init: Initializes the ROS 2 client library.</p>
+</li>
+<li>
+<p>LedsServer(): An instance of the LedsServer node is created.</p>
+</li>
+<li>
+<p>rclpy.spin: This function keeps the node running and listening for incoming requests.</p>
+</li>
+<li>
+<p>rclpy.shutdown: Shuts down the ROS 2 client library once the node is stopped.</p>
+</li>
+</ul>
+<h3 id="5-running-the-node">5. Running the Node</h3>
+<p>if <strong>name</strong> == '<strong>main</strong>':
+    main()</p>
+<ul>
+<li>This ensures that the main function is called when the script is executed directly (as opposed to being imported as a module).</li>
+</ul>
+<h3 id="full-code">Full Code</h3>
+<pre><code class="language-python">import rclpy
+from rclpy.node import Node
+from my_robot_interfaces.srv import BateryStatus  # Importa el servicio
+
+class LedsServer(Node):
+    def __init__(self):
+        super().__init__('leds_server')
+        self.srv = self.create_service(BateryStatus, 'battery_status_service', self.handle_service)
+        self.get_logger().info('LEDs is ready')
+
+    def handle_service(self, request, response):
+        # Convertimos los valores bool a 1 y 0
+        value1 = 1 if request.value1 else 0
+        value2 = 1 if request.value2 else 0
+        value3 = 1 if request.value3 else 0
+
+        # Imprimimos los valores de la batería convertidos a 1 y 0
+        self.get_logger().info(f&quot;Received battery status: {value1}, {value2}, {value3}&quot;)
+
+        # Lógica para imprimir el estado de la batería basado en el tercer valor (value3)
+        if request.value3:
+            self.get_logger().info(&quot;Low Battery&quot;)
+        else:
+            self.get_logger().info(&quot;Full Battery&quot;)
+
+        # Devolvemos los valores tal cual
+        response.value1 = request.value1
+        response.value2 = request.value2
+        response.value3 = request.value3
+        return response
+
+def main(args=None):
+    rclpy.init(args=args)
+    server = LedsServer()
+    rclpy.spin(server)
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<h2 id="code-battery-client-node">Code - Battery Client Node</h2>
+<p>This code defines a <strong>ROS 2 client node</strong> that interacts with the <strong>battery status service</strong>. The client sends requests to the service, toggles battery states (from "full" to "empty"), and processes the service's response asynchronously.</p>
+<h3 id="code-breakdown">Code Breakdown</h3>
+<h4 id="1-importing-libraries_1">1. Importing Libraries</h4>
+<pre><code class="language-python">import rclpy
+from rclpy.node import Node
+from my_robot_interfaces.srv import BateryStatus  # Import the service
+
+</code></pre>
+<ul>
+<li>
+<p>rclpy: ROS 2 Python library, used to handle nodes and communication.</p>
+</li>
+<li>
+<p>Node: A base class to define a ROS 2 node.</p>
+</li>
+<li>
+<p>BateryStatus: Custom service type for battery status, imported from the my_robot_interfaces.srv module.</p>
+</li>
+</ul>
+<h3 id="2-defining-the-batteryclient-node">2. Defining the BatteryClient Node</h3>
+<pre><code class="language-python">class BatteryClient(Node):
+    def __init__(self):
+        super().__init__('battery_client')
+        self.client = self.create_client(BateryStatus, 'battery_status_service')
+</code></pre>
+<ul>
+<li>
+<p>BatteryClient(Node): Inherits from Node, creating a custom ROS 2 node.</p>
+</li>
+<li>
+<p>create_client: This function creates a client that will interact with the battery_status_service using the BateryStatus service type.</p>
+</li>
+<li>
+<p>Waiting for the Service to Be Available</p>
+</li>
+</ul>
+<pre><code class="language-python">        # Esperar a que el servicio esté disponible
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service not available, waiting again...')
+ ```           
+
+- wait_for_service: This function blocks until the service is available. It waits up to 1 second before checking again.
+
+### 4. Setting Initial Battery Values and Timer
+
+```phython
+        self.request = BateryStatus.Request()
+        self.request.value1 = False
+        self.request.value2 = False
+        self.request.value3 = True
+
+        self.time_counter = 0  # Contador de tiempo
+        self.state_duration = 6  # Duración en segundos para mantener el valor en True
+
+        self.timer = self.create_timer(1.0, self.update_request)  # Llamamos update_request cada 1 segundo
+</code></pre>
+<ul>
+<li>
+<p>self.request: Initializes the request object for the service with value1, value2, and value3.</p>
+</li>
+<li>
+<p>value3 is initially set to True (indicating a full battery).</p>
+</li>
+<li>
+<p>self.time_counter: Counter to track the time elapsed.</p>
+</li>
+<li>
+<p>self.state_duration: Defines how long to keep the battery in the "True" (full) state.</p>
+</li>
+<li>
+<p>self.create_timer: Sets a timer to call update_request() every 1 second.</p>
+</li>
+</ul>
+<h3 id="5-updating-the-request-and-changing-states">5. Updating the Request and Changing States</h3>
+<pre><code class="language-phython">    def update_request(self):
+        self.time_counter += 1  # Aumentamos el contador de tiempo
+
+        if self.time_counter &gt;= self.state_duration:
+            self.request.value3 = False  # Cambio a estado de batería vacía
+            self.state_duration = 4  # Cambiar la duración a 4 segundos para False
+            self.time_counter = 0  # Reiniciar el contador
+
+            self.send_request()  # Enviar la solicitud al servicio
+
+        elif self.time_counter == 1:
+            self.request.value3 = True  # Cambio a estado de batería llena
+            self.send_request()  # Enviar la solicitud al servicio
+</code></pre>
+<ul>
+<li>
+<p>update_request(): This function is called every second by the timer.</p>
+</li>
+<li>
+<p>It increments the time counter and checks if the time duration for the current state has elapsed.</p>
+</li>
+<li>
+<p>If the duration is met, it switches the state of value3 (battery) to False (empty) and sets a new duration for the next state (4 seconds for empty).</p>
+</li>
+<li>
+<p>If the timer is still within the "full" state duration (6 seconds), it sends the request to update the state.</p>
+</li>
+</ul>
+<h3 id="6-sending-the-request-to-the-service">6. Sending the Request to the Service</h3>
+<pre><code class="language-python">    def send_request(self):
+        # Enviamos la solicitud al servicio
+        future = self.client.call_async(self.request)  # Enviar la solicitud
+        future.add_done_callback(self.handle_response)  # Usamos un callback para manejar la respuesta sin bloquear
+</code></pre>
+<ul>
+<li>
+<p>call_async(self.request): Sends the request to the service asynchronously, allowing the node to continue executing without blocking.</p>
+</li>
+<li>
+<p>add_done_callback(self.handle_response): Registers the handle_response function to process the service response when it's available.</p>
+</li>
+</ul>
+<h3 id="7-handling-the-service-response">7. Handling the Service Response</h3>
+<pre><code class="language-phython">    def handle_response(self, future):
+        try:
+            # Obtenemos la respuesta
+            response = future.result()
+
+            # Convertimos los valores bool en 1 y 0
+            value1 = 1 if response.value1 else 0
+            value2 = 1 if response.value2 else 0
+            value3 = 1 if response.value3 else 0
+
+            # Imprimimos los valores de la respuesta como 1 y 0 en lugar de True/False
+            self.get_logger().info(f&quot;Response received: {value1}, {value2}, {value3}&quot;)
+
+        except Exception as e:
+            self.get_logger().error(f&quot;Service call failed: {e}&quot;)
+</code></pre>
+<ul>
+<li>
+<p>handle_response(): This function processes the response received from the service.</p>
+</li>
+<li>
+<p>The boolean values (True/False) are converted to 1/0 for easier handling.</p>
+</li>
+<li>
+<p>Logs the received values.</p>
+</li>
+<li>
+<p>If the service call fails, it logs an error.</p>
+</li>
+</ul>
+<h3 id="8-main-function-to-spin-the-node">8. Main Function to Spin the Node</h3>
+<pre><code class="language-python">def main(args=None):
+    rclpy.init(args=args)
+    client = BatteryClient()
+    rclpy.spin(client)  # Mantener el nodo en ejecución mientras el temporizador cambia los valores
+    rclpy.shutdown()
+</code></pre>
+<ul>
+<li>
+<p>rclpy.init: Initializes the ROS 2 client library.</p>
+</li>
+<li>
+<p>BatteryClient(): Instantiates the client node.</p>
+</li>
+<li>
+<p>rclpy.spin(client): Keeps the node running and processing requests asynchronously.</p>
+</li>
+<li>
+<p>rclpy.shutdown: Shuts down the ROS 2 client library when the node stops.</p>
+</li>
+</ul>
+<h3 id="9-running-the-node">9. Running the Node</h3>
+<pre><code class="language-phython">if __name__ == '__main__':
+    main()
+</code></pre>
+<ul>
+<li>This ensures that the main function is executed when the script is run directly.</li>
+</ul>
+<h3 id="full-code_1">Full Code</h3>
+<p>This code defines a ROS 2 client node that periodically requests the battery status from a service. It toggles the battery state between "full" and "empty" every 6 and 4 seconds, respectively. The client sends asynchronous requests and handles responses using a callback, allowing non-blocking operation while interacting with the service.</p>
+<pre><code class="language-python">import rclpy
+from rclpy.node import Node
+from my_robot_interfaces.srv import BateryStatus  # Importa el servicio
+
+class BatteryClient(Node):
+    def __init__(self):
+        super().__init__('battery_client')
+        self.client = self.create_client(BateryStatus, 'battery_status_service')
+
+        # Esperar a que el servicio esté disponible
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service not available, waiting again...')
+
+        self.request = BateryStatus.Request()
+        # Inicialmente definimos los valores para la batería
+        self.request.value1 = False
+        self.request.value2 = False
+        self.request.value3 = True
+
+        # Controlador de tiempo para alternar entre True (6s) y False (4s)
+        self.time_counter = 0  # Contador de tiempo
+        self.state_duration = 6  # Duración en segundos para mantener el valor en True
+
+        # Creamos el temporizador para cambiar el estado cada 1 segundo
+        self.timer = self.create_timer(1.0, self.update_request)  # Llamamos update_request cada 1 segundo
+
+    def update_request(self):
+        self.time_counter += 1  # Aumentamos el contador de tiempo
+
+        # Cambiar el estado según el contador
+        if self.time_counter &gt;= self.state_duration:
+            # Cuando el tiempo es mayor o igual a la duración, cambiamos el estado a False
+            self.request.value3 = False
+            self.state_duration = 4  # Cambiamos la duración a 4 segundos para False
+            self.time_counter = 0  # Reiniciamos el contador
+
+            # Solo enviamos la solicitud una vez cuando el estado cambia
+            self.send_request()
+
+        elif self.time_counter == 1:
+            # Cuando el contador es 1 y estamos en el estado de True, enviamos la solicitud
+            self.request.value3 = True
+            self.send_request()
+
+    def send_request(self):
+        # Enviamos la solicitud al servicio
+        future = self.client.call_async(self.request)  # Enviar la solicitud
+        future.add_done_callback(self.handle_response)  # Usamos un callback para manejar la respuesta sin bloquear
+
+    def handle_response(self, future):
+        try:
+            # Obtenemos la respuesta
+            response = future.result()
+
+            # Convertimos los valores bool en 1 y 0
+            value1 = 1 if response.value1 else 0
+            value2 = 1 if response.value2 else 0
+            value3 = 1 if response.value3 else 0
+
+            # Imprimimos los valores de la respuesta como 1 y 0 en lugar de True/False
+            self.get_logger().info(f&quot;Response received: {value1}, {value2}, {value3}&quot;)
+
+        except Exception as e:
+            self.get_logger().error(f&quot;Service call failed: {e}&quot;)
+
+def main(args=None):
+    rclpy.init(args=args)
+    client = BatteryClient()
+    rclpy.spin(client)  # Mantener el nodo en ejecución mientras el temporizador cambia los valores
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<h1 id="results">Results</h1>
+<p>When you run both the LED server and the battery client nodes, you should see logs in the terminal indicating the battery status changes and the corresponding responses from the service. The LED server will log whether the battery is "Low" or "Full" based on the client's requests, while the client will log the responses received from the server.
+<img alt="TEXT" src="../recursos/imgs/act6/a%20%281%29.png" />{width=700px}
+<img alt="TEXT" src="../recursos/imgs/act6/a%20%282%29.png" />{width=700px}
+<img alt="TEXT" src="../recursos/imgs/act6/a%20%283%29.png" />{width=700px}</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
