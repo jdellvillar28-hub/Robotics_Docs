@@ -19,6 +19,7 @@ Analyze a 3-DOF articulated robotic mechanism by applying geometric methods to d
 ---
 
 ## 2. 3-DOF Articulated Robot Exercise
+![TEXT](recursos/imgs/act8/1%20(4).png){width=700px}
 
 ### Explanation
 This exercise focuses on a 3-Degree-of-Freedom (DOF) articulated robotic arm. First, the forward kinematics transformation matrix was established. Then, a geometric approach was used to find the inverse kinematics equations. Finally, the Jacobian matrix was computed by differentiating the position vector equations.
@@ -26,28 +27,40 @@ This exercise focuses on a 3-Degree-of-Freedom (DOF) articulated robotic arm. Fi
 ### Forward Kinematics Matrices
 Before jumping into the inverse kinematics, the position equations from the transformation matrix are needed. The individual transformation matrices ($A_1, A_2, A_3$) were defined based on the Denavit-Hartenberg parameters:
 
-**Link 1 Transformation Matrix ($A_1$):**
+**Transformation Matrix ($T_1$):**
+
 $$
 A_1 = \begin{bmatrix} \cos(q_1) & 0 & -\sin(q_1) & 0 \\ \sin(q_1) & 0 & \cos(q_1) & 0 \\ 0 & -1 & 0 & a_1 \\ 0 & 0 & 0 & 1 \end{bmatrix}
 $$
 
-**Link 2 Transformation Matrix ($A_2$):**
+**Transformation Matrix ($T_2$):**
+
 $$
 A_2 = \begin{bmatrix} \cos(q_2) & -\sin(q_2) & 0 & a_2\cos(q_2) \\ \sin(q_2) & \cos(q_2) & 0 & a_2\sin(q_2) \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix}
 $$
 
-**Link 3 Transformation Matrix ($A_3$):**
+**Transformation Matrix ($T_3$):**
+
 $$
 A_3 = \begin{bmatrix} \cos(q_3) & -\sin(q_3) & 0 & a_3\cos(q_3) \\ \sin(q_3) & \cos(q_3) & 0 & a_3\sin(q_3) \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix}
 $$
 
+![TEXT](recursos/imgs/act8/1%20(1).jpeg){width=700px}
 
+### Forward Kinematics Transformation Matrix ($T_0^3$)
 
-By multiplying these individual matrices ($T = A_1 \cdot A_2 \cdot A_3$), the complete forward kinematics transformation matrix is obtained:
+The complete transformation matrix from the base to the end effector is obtained by the product $T_0^3 = T_1 \cdot T_2 \cdot T_3$:
 
 $$
-T_0^3 = \begin{bmatrix} C_1 C_{23} & -C_1 S_{23} & -S_1 & (a_2 C_2 + a_3 C_{23})C_1 \\ S_1 C_{23} & -S_1 S_{23} & C_1 & (a_2 C_2 + a_3 C_{23})S_1 \\ -S_{23} & -C_{23} & 0 & a_1 - a_2 S_2 - a_3 S_{23} \\ 0 & 0 & 0 & 1 \end{bmatrix}
+T_0^3 = \begin{bmatrix} 
+\cos(q_1)\cos(q_2+q_3) & -\cos(q_1)\sin(q_2+q_3) & -\sin(q_1) & (a_2\cos(q_2) + a_3\cos(q_2+q_3))\cos(q_1) \\ 
+\sin(q_1)\cos(q_2+q_3) & -\sin(q_1)\sin(q_2+q_3) & \cos(q_1) & (a_2\cos(q_2) + a_3\cos(q_2+q_3))\sin(q_1) \\ 
+-\sin(q_2+q_3) & -\cos(q_2+q_3) & 0 & a_1 - a_2\sin(q_2) - a_3\sin(q_2+q_3) \\ 
+0 & 0 & 0 & 1 
+\end{bmatrix}
 $$
+
+> **Note:** $a_1, a_2, a_3$ represent the link lengths as defined in the DH table.
 
 ---
 
@@ -58,6 +71,8 @@ Using geometric analysis (trigonometry and the law of cosines), the joint angles
 - **$\theta_1$**: Solved using the $x$ and $y$ coordinates.
 - **$\theta_3$**: Solved using the Law of Cosines based on the distance to the target.
 - **$\theta_2$**: Solved using the elevation angle and the internal geometry of the arm.
+
+![TEXT](recursos/imgs/act8/1%20(2).jpeg){width=700px}
 
 ---
 
@@ -72,3 +87,5 @@ J = \begin{bmatrix}
 \frac{\partial Z}{\partial q_1} & \frac{\partial Z}{\partial q_2} & \frac{\partial Z}{\partial q_3}
 \end{bmatrix}
 $$
+
+![TEXT](recursos/imgs/act8/1%20(5).png){width=700px}
