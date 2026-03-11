@@ -19,7 +19,7 @@ Analyze a 3-DOF articulated robotic mechanism by applying geometric methods to d
 ---
 
 ## 2. 3-DOF Articulated Robot Exercise
-![TEXT](recursos/imgs/act8/1%20(4).png){width=700px}
+![TEXT](recursos/imgs/act8/1%20(4).png)
 
 ### Explanation
 This exercise focuses on a 3-Degree-of-Freedom (DOF) articulated robotic arm. First, the forward kinematics transformation matrix was established. Then, a geometric approach was used to find the inverse kinematics equations. Finally, the Jacobian matrix was computed by differentiating the position vector equations.
@@ -45,7 +45,7 @@ $$
 A_3 = \begin{bmatrix} \cos(q_3) & -\sin(q_3) & 0 & a_3\cos(q_3) \\ \sin(q_3) & \cos(q_3) & 0 & a_3\sin(q_3) \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix}
 $$
 
-![TEXT](recursos/imgs/act8/1%20(1).jpeg){width=700px}
+![TEXT](recursos/imgs/act8/1%20(1).jpeg)
 
 ### Forward Kinematics Transformation Matrix ($T_0^3$)
 
@@ -72,7 +72,7 @@ Using geometric analysis (trigonometry and the law of cosines), the joint angles
 - **$\theta_3$**: Solved using the Law of Cosines based on the distance to the target.
 - **$\theta_2$**: Solved using the elevation angle and the internal geometry of the arm.
 
-![TEXT](recursos/imgs/act8/1%20(2).jpeg){width=700px}
+![TEXT](recursos/imgs/act8/1%20(2).jpeg)
 
 ---
 
@@ -88,4 +88,4 @@ J = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-![TEXT](recursos/imgs/act8/1%20(5).png){width=700px}
+![TEXT](recursos/imgs/act8/1%20(5).png)
